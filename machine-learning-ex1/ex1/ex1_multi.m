@@ -104,11 +104,10 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-x_new = [1650, 3]
-x_new_norm = (x_new - mu)./sigma
-x_new_norm = [1 x_new_norm]
-price = sum(theta'.*x_new_norm, 2); 
-
+x_new = [1650, 3];
+x_new_norm = (x_new - mu)./sigma;
+x_new_norm = [1 x_new_norm];
+price = x_new_norm*theta; 
 % ============================================================
 
 fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
@@ -152,10 +151,8 @@ fprintf('\n');
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
 x_new = [1650, 3]
-x_new_norm = (x_new - mu)./sigma
-x_new_norm = [1 x_new_norm]
-price = sum(theta'.*x_new_norm, 2); 
-
+x_new = [1 x_new]
+price = sum(theta'.*x_new, 2); 
 
 % ============================================================
 

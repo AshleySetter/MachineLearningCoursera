@@ -13,10 +13,10 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-y_pred = sum(theta'.*X, 2) % this does the theta vector times each X_j 
+y_pred = X*theta %sum(theta'.*X, 2) % this does the theta vector times each X_j 
 %vector and then sums along the axis to get sum(theta_j*x_j) for each row
 
-J = sum(y_pred - y).^2/(2*m)
+J = sum((y_pred-y).^2)/(2*m) %(y_pred - y).^2/(2*m)
 
 % =========================================================================
 
